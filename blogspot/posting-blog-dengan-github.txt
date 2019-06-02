@@ -56,7 +56,7 @@ Oke tanpa banyak basa-basi mari kita mulai.
     <pre style="width=auto; background: #f2f2f2; padding: 12px; border-radius: 2px;">
     &lt;div id="pages-header"&gt;&lt/div&gt;
     &lt;div id="pages-body"&gt;&lt/div&gt;
-    &ltbr/&gt;
+    
     &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"&gt;&lt;/script&gt;
     &lt;script src="https://unpkg.com/axios/dist/axios.min.js"&gt;&lt;/script&gt;
     &lt;script&gt;
