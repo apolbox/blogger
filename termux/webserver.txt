@@ -1,2 +1,77 @@
-Selamat gini hari agan semua,
+<br/>
+semoga kita diberi nikmat kesehatan agar dapat menikmati hidup ini.<br />
+<br />
+Oke kali ini saya akan berbagi bagaimana caranya membuat Android kita bekerja sebagai webserver.<br />
+<br />
+Disini saya asumsikan Anda sudah mengerti apa itu kegunaan webserver, jadi postingan ini saya ajukan untuk pemula maupun yang belum tahu bahwa Android kita bisa dijadikan webserver.<br />
+<br />
+Mari kita mulai:<br />
+<br />
+Syarat :<br />
+1. Aplikasi termux (Play store)<br />
+2. Quoda Code Editor (Play Store)<br />
+3. Kuota internet tentunya 😂<br />
+4. Android versi minimal Lollipop.<br />
+<br />
+Oke kita anggap termux sudah berhasil kalian install.<br />
+mari kita mulai langkah-langkahnya.<br />
+<br />
+1. Lakukan update &amp;&amp; upgrade<br />
+<pre style="background: #f2f2f2; border-radius: 2px; padding: 12px; width: auto;">$ apt update &amp;&amp; apt upgrade
+</pre>
+<br />
+2. Install git<br />
+<pre style="background: #f2f2f2; border-radius: 2px; padding: 12px; width: 315px;">$ apt install -y git
+</pre>
+<br />
+3. Cloning repository dari github<br />
+<pre style="background: #f2f2f2; border-radius: 2px; padding: 12px; width: auto;">$ git clone https://github.com/apolbox/termux-webserver.git
+$ cd termux-webserver
+$ chmod +x ./install
+$ ./install
+</pre>
+<br />
+Proses instalasi akan berjalan, tunggu sampai selesai.
 
+Jika muncul pertanyaan anda bisa memilih untuk mengaturnya atau tidak.
+<br />
+<br />
+4. Untuk menginstall database gunakan perintah berikut:<br />
+<pre style="background: #f2f2f2; border-radius: 2px; padding: 12px; width: autopx;">$ lampp-db install</pre>
+<br />
+Proses instalasi akan berjalan dan akan muncul pertanyaan untuk menjalankan layanan database.<br />
+<br />
+Untuk menjalankan layanan webserver dan layanan database anda bisa menggunakan perintah berikut:<br />
+<pre style="background: #f2f2f2; border-radius: 2px; padding: 12px; width: auto;">$ lampp start &amp;&amp; lampp-db start
+</pre>
+<br />
+Untuk menghentikan semua layanan gunakan perintah berikut:<br />
+<pre style="background: #f2f2f2; border-radius: 2px; padding: 12px; width: auto;">$ lampp stop &amp;&amp; lampp-db stop
+</pre>
+<br />
+Sekarang buka web browser anda dan coba ketikkan localhost:8080<br />
+<br />
+Jika tidak ada error akan muncul tampilan seperti gambar dibawah ini:<br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://1.bp.blogspot.com/-tGh6kypzut0/XO4arzs__DI/AAAAAAAAEhk/XMJgHNfKDYcnM9cij2N8TygEpmqTLuTXgCLcBGAs/s1600/Screenshot_2019-05-29-11-59-02-022_com.android.chrome.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="1600" data-original-width="800" height="320" src="https://1.bp.blogspot.com/-tGh6kypzut0/XO4arzs__DI/AAAAAAAAEhk/XMJgHNfKDYcnM9cij2N8TygEpmqTLuTXgCLcBGAs/s320/Screenshot_2019-05-29-11-59-02-022_com.android.chrome.png" width="160" /></a></div>
+<br />
+Buka text editor kesayangan anda, dan arahkan ke direktori /sdcard/www<br />
+<br />
+Didalam folder www ada file index.php coba anda buka file tersebut.<br />
+<br />
+Mari kita edit file index.php ini seperti berikut:<br />
+<pre style="background: #f2f2f2; border-radius: 2px; padding: 12px; width: auto;">&lt;?php
+
+echo "Sedang belajar webserver"
+
+?&gt;</pre>
+<br />
+Buka web browser anda lagi dan reload, jika benar akan muncul seperti gambar dibawah ini:<br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://1.bp.blogspot.com/-rZkCB3E864w/XO4b0qfbOUI/AAAAAAAAEhs/BscBtoBPIsktGICrHReOC495RCIyljgMwCLcBGAs/s1600/Screenshot_2019-05-29-12-42-10-929_com.android.chrome.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="1600" data-original-width="800" height="320" src="https://1.bp.blogspot.com/-rZkCB3E864w/XO4b0qfbOUI/AAAAAAAAEhs/BscBtoBPIsktGICrHReOC495RCIyljgMwCLcBGAs/s320/Screenshot_2019-05-29-12-42-10-929_com.android.chrome.png" width="160" /></a></div>
+<br />
+Semoga bermanfaat, jgn lupa like, comment dan bagikan agar bermanfaat bagi yang lain.<br />
+<br />
+Sumber:&nbsp;<a href="https://github.com/apolbox/termux-webserver.git" target="_blank">https://github.com/apolbox/termux-webserver.git</a>
