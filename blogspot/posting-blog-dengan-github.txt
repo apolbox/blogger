@@ -58,7 +58,7 @@ Oke tanpa banyak basa-basi mari kita mulai.
     &lt;script src="https://unpkg.com/axios/dist/axios.min.js"&gt;&lt;/script&gt;
     &lt;script&lt;
         // Isi url artikel anda
-        const Url='https://raw.githubusercontent.com/apolbox/blogger/master/termux/webserver.txt';
+        const Url='https://raw.githubusercontent.com/username_akun_github/blogger/master/post-1.txt';
 
         // Jquery run
         $(document).ready(function(){
@@ -74,3 +74,14 @@ Oke tanpa banyak basa-basi mari kita mulai.
     </pre>
     </li>
 </ol>
+<b>Penjelasan:</b>
+<p>Untuk bagian <code>const Url=''</code> isi dengan url artikel anda yang ditulis digithub,
+lalu bagaimana untuk mendapatkan url tersebut, lihat gambar dibawah ini:
+<img src="img/tutorial-raw.png"></img>
+Bagian yang dilingkaran merah atau yang bernama raw tersebut tinggal diklik, lalu copy urlnya untuk digunakan di const Url='https://raw.githubusercontent.com/apolbox/termux-webserver/master/install'.
+</p>
+
+Setelah itu coba anda buka blogger anda kembali, dan coba pratinjau artikel anda sebelum dipublikasikan.
+Semoga berhasil dan jika anda merasa kesulitan mengikuti tutorial ini anda bisa tinggalkan komentar.
+
+See you next post.
