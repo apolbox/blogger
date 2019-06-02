@@ -39,5 +39,38 @@ Oke tanpa banyak basa-basi mari kita mulai.
     Ini artikel pertamaku
     </pre>
     </li>
-    <li>Simpan dan buka kembali aplikasi termux</li>
+    <li>Simpan dan buka kembali aplikasi termux<br/>
+    Setelah termux terbuka ketikkan perintah berikut:
+    <pre style="width=auto; background: #f2f2f2; padding: 12px; border-radius: 2px;">
+    $ cd /sdcard
+    $ cd nama_repository_anda
+    $ git add *
+    $ git commit -m "Artikel pertamaku"
+    $ git push
+    </pre>
+    Jika muncul pertanyaan untuk memasukkan username dan password, isi dengan username dan password akun github anda.
+    </li>
+    <li>
+    Buka blogger anda dibrowser kesayangan anda, lalu buat entri baru.
+    Anda tinggal copy dan paste saja kode dibawah ini:
+    <pre style="width=auto; background: #f2f2f2; padding: 12px; border-radius: 2px;">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        // Isi url artikel anda
+        const Url='https://raw.githubusercontent.com/apolbox/blogger/master/termux/webserver.txt';
+
+        // Jquery run
+        $(document).ready(function(){
+            // Beri salam hangat pada pembaca
+            $("#pages-header").text("Selamat gini hari agan semua");
+                axios.get(Url, { 'responseType': 'text/plain'})
+                .then(response => {
+                    $("#pages-body").html(response.data);
+                })
+                .catch(err=>console.log(err))
+        });
+    </script>
+    </pre>
+    </li>
 </ol>
