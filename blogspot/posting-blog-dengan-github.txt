@@ -7,6 +7,7 @@ caranya agar dalam post atau update artikel kita lebih mudah.
     <li>Mempunyai pengetahuan tentang HTML</li>
     <li>Aplikasi Termux (playstore)</li>
     <li>Akun <a href="https://github.com">github</a></li>
+    <li>Text editor / notepad</li>
 </ol>
 <p>
 Bagi yang belum tahu tentang HTML lebih baik belajar terlebih dahulu,
@@ -29,4 +30,14 @@ Oke tanpa banyak basa-basi mari kita mulai.
     $ git clone https://github.com/nama_akun_github/repository_anda
     </pre>
     </li>
+    <li>
+    Buka notepad atau text editor kesayangan anda, lalu buka file <code>post-1.txt</code>
+    yang tadi telah kita buat dan isi file dengan tulisan anda.
+
+    contoh isi file <code>post-1.txt</code>:
+    <pre style="width=auto; background: #f2f2f2; padding: 12px; border-radius: 2px;">
+    Ini artikel pertamaku
+    </pre>
+    </li>
+    <li>Simpan dan buka kembali aplikasi termux</li>
 </ol>
