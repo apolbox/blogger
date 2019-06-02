@@ -77,11 +77,11 @@ Oke tanpa banyak basa-basi mari kita mulai.
 <b>Penjelasan:</b>
 <p>Untuk bagian <code>const Url=''</code> isi dengan url artikel anda yang ditulis digithub,
 lalu bagaimana untuk mendapatkan url tersebut, lihat gambar dibawah ini:
-<img src="img/tutorial-raw.png"></img>
+<img src="https://github.com/apolbox/blogger/blob/master/blogspot/img/tutorial-raw.png"/>
 Bagian yang dilingkaran merah atau yang bernama raw tersebut tinggal diklik, lalu copy urlnya untuk digunakan di const Url='https://raw.githubusercontent.com/apolbox/termux-webserver/master/install'.
 </p>
 
-Setelah itu coba anda buka blogger anda kembali, dan coba pratinjau artikel anda sebelum dipublikasikan.
+Setelah itu coba anda buka blogger anda kembali, dan coba pratinjau artikel anda sebelum dipublikasikan.<br/>
 Semoga berhasil dan jika anda merasa kesulitan mengikuti tutorial ini anda bisa tinggalkan komentar.
 
 See you next post.
