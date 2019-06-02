@@ -54,6 +54,7 @@ Oke tanpa banyak basa-basi mari kita mulai.
     Buka blogger anda dibrowser kesayangan anda, lalu buat entri baru.
     Anda tinggal copy dan paste saja kode dibawah ini:
     <pre style="width=auto; background: #f2f2f2; padding: 12px; border-radius: 2px;">
+    &lt;
     &gt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"&lt;&gt;/script&lt;
     &gt;script src="https://unpkg.com/axios/dist/axios.min.js"&lt;&gt;/script&lt;
     &gt;script&lt;
