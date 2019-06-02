@@ -1,25 +1,22 @@
 <p>
-Jumpa lagi dengan saya, kali ini saya akan berbagi bagaimana<br/>
+Jumpa lagi dengan saya, kali ini saya akan berbagi bagaimana
 caranya agar dalam post atau update artikel kita lebih mudah.
 </p>
-<br/>
 <b>Syarat:</b>
 <ol>
     <li>Mempunyai pengetahuan tentang HTML</li>
     <li>Aplikasi Termux (playstore)</li>
     <li>Akun <a href="https://github.com">github</a></li>
 </ol>
-<br/>
 <p>
-Bagi yang belum tahu tentang HTML lebih baik belajar terlebih dahulu,<br/>
+Bagi yang belum tahu tentang HTML lebih baik belajar terlebih dahulu,
 agar dalam mengikuti tutorial ini lebih mudah dipahami.<br/>
 Oke tanpa banyak basa-basi mari kita mulai.
 </p>
-<br/>
 <ol>
     <li>Pastikan anda telah mempunyai akun github,<br/>
     Jika sudah buat repository baru beri nama <code>blogger</code>,<br/>
-    lalu buat sebuah file dengan nama <code>post-1.txt</code> (anda bebas memberi nama filenya)<br/>
+    lalu buat sebuah file dengan nama <code>post-1.txt</code> (anda bebas memberi nama filenya)
     lalu isi file <code>post-1.txt</code> dengan tulisan anda.<br/>
     </li>
     <li>
