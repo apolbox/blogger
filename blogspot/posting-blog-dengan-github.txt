@@ -76,8 +76,8 @@ Oke tanpa banyak basa-basi mari kita mulai.
 </ol>
 <b>Penjelasan:</b>
 <p>Untuk bagian <code>const Url=''</code> isi dengan url artikel anda yang ditulis digithub,
-lalu bagaimana untuk mendapatkan url tersebut, lihat gambar dibawah ini:
-<img src="https://github.com/apolbox/blogger/blob/master/blogspot/img/tutorial-raw.png"/>
+lalu bagaimana untuk mendapatkan url tersebut, lihat gambar dibawah ini:<br/>
+<a href="https://github.com/apolbox/blogger/blob/master/blogspot/img/tutorial-raw.png"><img src="https://github.com/apolbox/blogger/blob/master/blogspot/img/tutorial-raw.png"/></a>
 Bagian yang dilingkaran merah atau yang bernama raw tersebut tinggal diklik, lalu copy urlnya untuk digunakan di const Url='https://raw.githubusercontent.com/apolbox/termux-webserver/master/install'.
 </p>
 
