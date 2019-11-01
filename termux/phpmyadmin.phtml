@@ -1,21 +1,167 @@
-Selamat pagi, siang, malam dan dini hari.<br/>
-
-Jumpa lagi dengan tutorial dari&nbsp;<a href="https://apolbox.blogspot.com/?m=1" target="_blank">apolbox</a>,
-pada kesempatan kali ini saya akan berbagi caranya install phpMyAdmin di Android kita, untuk melanjutkan tutorial sebelumnya yaitu:
-<a href="https://apolbox.blogspot.com/2018/09/cara-membuat-webserver-diandroid.html">Tutorial menjalankan localhost di Android.</a><br/>
-
-Emang bisa install phpMyAdmin di android?<br/>
-Jawabannya sangat <b>bisa</b>.<br/>
-
-Oke tanpa berlama-lama mari kita mulai tutorialnya.<br>
-
-Buka aplikasi termux dan masuk difolder termux-webserver dengan perintah dibawah ini:<br>
+Selamat pagi, siang, malam, dan dini hari.<br />
+<div>
+<br /></div>
+<div>
+Jumpa lagi dengan tutorial dari&nbsp;<a href="https://apolbox.blogspot.com/?m=1" target="_blank">apolbox</a>, pada kesempatan kali ini saya akan berbagi caranya install phpMyAdmin di Android kita,<br>
+Untuk melanjutkan tutorial sebelumnya yaitu: <a href="https://apolbox.blogspot.com/2018/09/cara-membuat-webserver-diandroid.html">Tutorial menjalankan localhost di Android.</a>
+</div>
+<div>
+<br /></div>
+<div>
+Emang bisa install phpMyAdmin di android?</div>
+<div>
+Jawaban saya sangat bisa.</div>
+<div>
+<br /></div>
+<div>
+Oke tanpa berlama-lama mari kita mulai tutorialnya.</div>
+<div>
+<br /></div>
+<div>
+1. Pertama download phpMyAdmin di situs resminya atau klik link dibawah ini:</div>
+<div>
+<br /></div>
+<div>
+<a href="https://files.phpmyadmin.net/phpMyAdmin/4.8.4/phpMyAdmin-4.8.4-all-languages.zip" style="background: red; color: white; padding: 12px; text-decoration: none;" target="_blank">Download phpMyAdmin</a><br />
+<br />
+Jika sudah download ekstrak phpMyAdmin dan pindahkan ke folder www.<br />
+<br />
+Atau anda bisa lihat video dibawah ini:<br />
+<div class="separator" style="clear: both; text-align: center;">
+<object class="BLOG_video_class" contentid="36cd9bc6b24e82c0" height="266" id="BLOG_video-36cd9bc6b24e82c0" width="320"></object></div>
+<br />
+Lalu bagaimana menjalankan phpMyAdminnya?<br />
+<br />
+Pertanyaan yang bagus, mari kita coba aktifkan terlebih dahulu web server kita dengan cara dibawah ini:<br />
+<br />
+Buka aplikasi termux dan ketikkan perintah dibawah ini:<br />
+<br />
 <pre style="background: #f2f2f2; border-radius: 2px; padding: 12px; width: auto;">
-$ cd termux-webserver
-$ curl -s https://raw.githubusercontent.com/apolbox/termux-webserver/dev/update > ./update
-$ chmod +x ./update
-$ ./update
-</pre><br>
-
-Disini PhpMyAdmin akan terinstall secara otomatis.<br><br>
-Agar tutorial ini dapat anda pahami dengan baik, anda dapat membaca terlebih dahulu postingan saya sebelumnya yaitu: <a href="https://apolbox.blogspot.com/2018/09/cara-membuat-webserver-diandroid.html">Tutorial menjalankan localhost di Android.</a>
+$ lighttpd -f lighttpd.conf<br />
+$ mysqld
+</pre><br />
+<p>
+    Jika file lighttpd.conf tidak ada anda dapat mengunduhnya dengan perintah dibawah ini:
+    <pre style="background: #f2f2f2; border-radius: 2px; padding: 12px; width: auto;">
+    $ curl -s https://raw.githubusercontent.com/apolbox/termux-webserver/master/etc/config/lighttpd.conf > lighttpd.conf
+    </pre>
+</p>
+<br />
+Lalu buka browser anda dan ketikkan 127.0.0.1:8080/phpmyadmin dan lihat gambar dibawah ini.<br />
+<br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://3.bp.blogspot.com/-n9xrjahqgQg/XEJ_AtDku7I/AAAAAAAAEbY/USXhFDGZm4gm_g8NJFtgItCGizFU_QkswCEwYBhgL/s1600/Screenshot_2019-01-19-08-35-03-450_com.android.chrome.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="1600" data-original-width="800" height="320" src="https://3.bp.blogspot.com/-n9xrjahqgQg/XEJ_AtDku7I/AAAAAAAAEbY/USXhFDGZm4gm_g8NJFtgItCGizFU_QkswCEwYBhgL/s320/Screenshot_2019-01-19-08-35-03-450_com.android.chrome.png" width="160" /></a></div>
+<div class="separator" style="clear: both; text-align: center;">
+Gambar 1.0</div>
+<br />
+Gambar 1.0 adalah gambar dimana kita mencoba untuk login dengan username root.<br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://1.bp.blogspot.com/-Vdu4WABHcQA/XEJ_9Dt_8ZI/AAAAAAAAEbc/pssmFn1Hg3YoC38oAvwv4QWgyEyLCGN8gCLcBGAs/s1600/Screenshot_2019-01-19-08-35-07-611_com.android.chrome.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="1600" data-original-width="800" height="320" src="https://1.bp.blogspot.com/-Vdu4WABHcQA/XEJ_9Dt_8ZI/AAAAAAAAEbc/pssmFn1Hg3YoC38oAvwv4QWgyEyLCGN8gCLcBGAs/s320/Screenshot_2019-01-19-08-35-07-611_com.android.chrome.png" width="160" /></a></div>
+<div class="separator" style="clear: both; text-align: center;">
+Gambar 1.1</div>
+<br />
+<br />
+Gambar 1.1 adalah gambar dimana kita mendapat pesan error atau kita tidak dapat melakukan login.<br />
+<br />
+Pertanyaannya adalah bagaimana agar kita dapat login?<br />
+<br />
+Mari kita selesaikan masalah ini bersama-sama.<br />
+<br />
+2. Buka text editor android kesayangan anda<br />
+<br />
+Kalau penulis sendiri lebih suka menggunakan text editor Quoda Code Editor bisa diunduh lewat playstore.<br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://3.bp.blogspot.com/-cY4QFJBrTgs/XEKA-y6xskI/AAAAAAAAEbo/1tsxeG58EugbF55mmHSTzDYKEZ5ZvMl8QCLcBGAs/s1600/Screenshot_2019-01-19-08-43-30-485_com.henrythompson.quoda.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="1600" data-original-width="800" height="320" src="https://3.bp.blogspot.com/-cY4QFJBrTgs/XEKA-y6xskI/AAAAAAAAEbo/1tsxeG58EugbF55mmHSTzDYKEZ5ZvMl8QCLcBGAs/s320/Screenshot_2019-01-19-08-43-30-485_com.henrythompson.quoda.png" width="160" /></a></div>
+<div class="separator" style="clear: both; text-align: center;">
+Gambar 2.0</div>
+<br />
+<br />
+Buka file config.sample.inc.php seperti gambar 2.0, setelah terbuka anda akan melihat beberapa baris konfigurasi bawaan dari phpMyAdmin, tugas kita adalah mengubah konfigurasi agar dapat login nantinya.<br />
+<br />
+Hal pertama setelah kita membuka file config.sample.inc.php adalah menyimpan ulang dengan nama config.inc.php, silahkan perhatikan gambar dibawah ini.<br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://1.bp.blogspot.com/-DzhtI9Izlds/XEKCGhawN6I/AAAAAAAAEbw/Z-WFu4wO_FUnNdQ0Z0_TBJl9culim2CfwCLcBGAs/s1600/Screenshot_2019-01-19-08-48-45-524_com.henrythompson.quoda.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="1600" data-original-width="800" height="320" src="https://1.bp.blogspot.com/-DzhtI9Izlds/XEKCGhawN6I/AAAAAAAAEbw/Z-WFu4wO_FUnNdQ0Z0_TBJl9culim2CfwCLcBGAs/s320/Screenshot_2019-01-19-08-48-45-524_com.henrythompson.quoda.png" width="160" /></a></div>
+<div class="separator" style="clear: both; text-align: center;">
+Gambar 2.1</div>
+<br />
+<br />
+Gambar 2.1 adalah gambar dimana kita menyimpan file config.sample.inc.php menjadi config.inc.php.<br />
+<br />
+Setelah itu ubah beberapa baris menjadi seperti ini.<br />
+<br />
+<pre style="background: #f2f2f2; border-radius: 2px; padding: 12px; width: auto;">
+/* Authentication type */<br />
+$cfg['Servers'][$i]['auth_type'] = 'cookie';<br />
+/* Server parameters */<br />
+$cfg['Servers'][$i]['host'] = 'localhost:3306';<br />
+$cfg['Servers'][$i]['compress'] = false;<br />
+$cfg['Servers'][$i]['AllowNoPassword'] = true;<br />
+</pre>
+<br />
+Atau anda dapat melihat gambar 2.2 dibawah ini.<br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://3.bp.blogspot.com/-j91YjH06dkw/XEKDNygsd7I/AAAAAAAAEb4/SxpRwaUZHJMi9wgJEyKOAJBPYqVA3r__QCLcBGAs/s1600/Screenshot_2019-01-19-08-52-07-584_com.henrythompson.quoda.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="1600" data-original-width="800" height="320" src="https://3.bp.blogspot.com/-j91YjH06dkw/XEKDNygsd7I/AAAAAAAAEb4/SxpRwaUZHJMi9wgJEyKOAJBPYqVA3r__QCLcBGAs/s320/Screenshot_2019-01-19-08-52-07-584_com.henrythompson.quoda.png" width="160" /></a></div>
+<div class="separator" style="clear: both; text-align: center;">
+Gambar 2.2</div>
+<br />
+<br />
+Setelah itu coba kita buka lagi browser web kita, dan lakukan login kembali seperti gambar 1.0.<br />
+<br />
+Jika hasilnya seperti gambar dibawah ini berarti anda telah mengikuti tutorial ini dengan baik dan selamat anda telah berhasil install phpMyAdmin di Android.<br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<a href="https://2.bp.blogspot.com/-03Jz1AjIhKE/XEKDxF8P0CI/AAAAAAAAEcA/z1AXhu0_dXEuqT8dMqNjsNyEpewnH6QYACLcBGAs/s1600/Screenshot_2019-01-19-08-54-57-787_com.android.chrome.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="1600" data-original-width="800" height="320" src="https://2.bp.blogspot.com/-03Jz1AjIhKE/XEKDxF8P0CI/AAAAAAAAEcA/z1AXhu0_dXEuqT8dMqNjsNyEpewnH6QYACLcBGAs/s320/Screenshot_2019-01-19-08-54-57-787_com.android.chrome.png" width="160" /></a></div>
+<div class="separator" style="clear: both; text-align: center;">
+Finish</div>
+<br />
+Untuk yang terbiasa dengan tutorial berbentuk video silahkan lihat dibawah ini:<br />
+<br />
+<div class="separator" style="clear: both; text-align: center;">
+<iframe width="320" height="266" class="YOUTUBE-iframe-video" data-thumbnail-src="https://i.ytimg.com/vi/49bwewCgvEM/0.jpg" src="https://www.youtube.com/embed/49bwewCgvEM?feature=player_embedded" frameborder="0" allowfullscreen></iframe></div>
+</div>
+<div>
+    <i>Catatan:</i>
+    <p>
+        Tutorial diatas adalah cara lama untuk menginstall PhpMyAdmin di android, untuk menggunakan cara terbaru anda cukup ketikkan perintah dibawah ini:
+    </p>
+    <pre style="background: #f2f2f2; border-radius: 2px; padding: 12px; width: auto;">
+    $ ls
+    $ cd termux-webserver 
+    $ curl -s https://raw.githubusercontent.com/apolbox/termux-webserver/dev/update > ./update
+    $ chmod +x ./update
+    $ ./update
+    </pre>
+    <p>Keterangan:</p>
+    <ul>
+        <li>$ ls</li>
+        <p>Digunakan untuk melihat daftar file ditermux pada direktori home.<br>
+        Seharusnya anda dapat menemukan folder bernama termux-webserver
+        </p>
+        <li>$ cd termux-webserver</li>
+        <p>Digunakan untuk masuk ke folder termux-webserver</p>
+        <li>$ curl -s https://raw.githubusercontent.com/apolbox/termux-webserver/dev/update > ./update</li>
+        <p>Untuk mengunduh file dari repository termux-webserver</p>
+        <li>$ chmod +x ./update</li>
+        <p>Mengubah permission sebuah file agar dapat dieksekusi.</p>
+        <li>$ ./update</li>
+        <p>Untuk menjalankan update termux-webserver.</p>
+    </ul>
+</div>
+<div>
+    Setelah perintah diatas dijalankan, PhpMyAdmin akan terinstall secara otomatis.<br><br>
+    Agar tutorial ini dapat anda pahami dengan baik, anda dapat membaca terlebih dahulu postingan saya sebelumnya yaitu: <a href="https://apolbox.blogspot.com/2018/09/cara-membuat-webserver-diandroid.html">Tutorial menjalankan localhost di Android.</a>
+</div>
+<br />
+<br />
+Terima kasih telah berkunjung di blog sederhana saya, silahkan tinggalkan komentar anda atau jika anda ingin meminta tutorial lainnya.<br />
+<br />
+Sampai jumpa lagi di tutorial berikutnya.<br />
+<br />
+<br />
+<br />
+<br />
