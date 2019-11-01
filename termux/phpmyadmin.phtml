@@ -37,15 +37,15 @@ Pertanyaan yang bagus, mari kita coba aktifkan terlebih dahulu web server kita d
 Buka aplikasi termux dan ketikkan perintah dibawah ini:<br />
 <br />
 <pre style="background: #f2f2f2; border-radius: 2px; padding: 12px; width: auto;">
-$ lighttpd -f lighttpd.conf<br />
+$ lighttpd -f lighttpd.conf
 $ mysqld
 </pre><br />
 <p>
     Jika file lighttpd.conf tidak ada anda dapat mengunduhnya dengan perintah dibawah ini:
-    <pre style="background: #f2f2f2; border-radius: 2px; padding: 12px; width: auto;">
-    $ curl -s https://raw.githubusercontent.com/apolbox/termux-webserver/master/etc/config/lighttpd.conf > lighttpd.conf
-    </pre>
 </p>
+<pre style="background: #f2f2f2; border-radius: 2px; padding: 12px; width: auto;">
+$ curl -s https://raw.githubusercontent.com/apolbox/termux-webserver/master/etc/config/lighttpd.conf > lighttpd.conf
+</pre>
 <br />
 Lalu buka browser anda dan ketikkan 127.0.0.1:8080/phpmyadmin dan lihat gambar dibawah ini.<br />
 <br />
@@ -94,12 +94,12 @@ Gambar 2.1 adalah gambar dimana kita menyimpan file config.sample.inc.php menjad
 Setelah itu ubah beberapa baris menjadi seperti ini.<br />
 <br />
 <pre style="background: #f2f2f2; border-radius: 2px; padding: 12px; width: auto;">
-/* Authentication type */<br />
-$cfg['Servers'][$i]['auth_type'] = 'cookie';<br />
-/* Server parameters */<br />
-$cfg['Servers'][$i]['host'] = 'localhost:3306';<br />
-$cfg['Servers'][$i]['compress'] = false;<br />
-$cfg['Servers'][$i]['AllowNoPassword'] = true;<br />
+/* Authentication type */
+$cfg['Servers'][$i]['auth_type'] = 'cookie';
+/* Server parameters */
+$cfg['Servers'][$i]['host'] = 'localhost:3306';
+$cfg['Servers'][$i]['compress'] = false;
+$cfg['Servers'][$i]['AllowNoPassword'] = true;
 </pre>
 <br />
 Atau anda dapat melihat gambar 2.2 dibawah ini.<br />
@@ -153,15 +153,12 @@ Untuk yang terbiasa dengan tutorial berbentuk video silahkan lihat dibawah ini:<
     </ul>
 </div>
 <div>
-    Setelah perintah diatas dijalankan, PhpMyAdmin akan terinstall secara otomatis.<br><br>
+    Setelah perintah diatas dijalankan, PhpMyAdmin akan terinstall secara otomatis.<br>
     Agar tutorial ini dapat anda pahami dengan baik, anda dapat membaca terlebih dahulu postingan saya sebelumnya yaitu: <a href="https://apolbox.blogspot.com/2018/09/cara-membuat-webserver-diandroid.html">Tutorial menjalankan localhost di Android.</a>
 </div>
-<br />
-<br />
-Terima kasih telah berkunjung di blog sederhana saya, silahkan tinggalkan komentar anda atau jika anda ingin meminta tutorial lainnya.<br />
-<br />
-Sampai jumpa lagi di tutorial berikutnya.<br />
-<br />
-<br />
-<br />
-<br />
+<p>
+    Terima kasih telah berkunjung di blog sederhana saya, silahkan tinggalkan komentar anda atau jika anda ingin meminta tutorial lainnya.
+</p>
+<p>
+    Sampai jumpa lagi di tutorial berikutnya.
+</p>
