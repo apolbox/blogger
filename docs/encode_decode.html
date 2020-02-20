@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
       	<style>
-      	  .form-control {height: 320px;}
+      	  .form-control {height: 320px; resize: none;}
       	  .popup-container {position: fixed; width: 100℅; height: 400px; overflow: hidden;}
       	  .popup, {position: relative; width: 100℅; height: 320px;}
       	  .popup-frame, frame {position: fixed; width: 320px; height: 400px; visibility: hidden;}
@@ -10,7 +10,7 @@
     		</div>
     		<form action="" method="post" name="jsed">
     			<div class="form-group">
-    				<textarea class="form-control border shadow bg-light" name="edcode" placeholder="Terapkan kode disini untuk mengubah."></textarea>
+    				<textarea class="form-control border shadow bg-light rounded" name="edcode" placeholder="Terapkan kode disini untuk mengubah."></textarea>
     			</div>
     			<div class="form-group">
     				<div class="help-block lead">
@@ -23,7 +23,7 @@
     	</div>
     	<div class="container">
     		<h1>Hasil</h1>
-    		<code><textarea class="form-control" id="result"></textarea></code>
+    		<code><textarea class="form-control border shadow bg-light rounded" id="result"></textarea></code>
     	</div>
     	<!-- Optional JavaScript -->
     	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
