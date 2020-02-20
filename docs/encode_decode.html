@@ -1,122 +1,108 @@
-<!-- Trending blog -->
 <!DOCTYPE html>
 <html lang="en">
- <head>
-      <!-- Bootstrap CSS -->
-      <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet"></link>
-      <style>
-        .form-control {height: 320px;}
-        .popup-container {position: fixed; width: 100℅; height: 400px; overflow: hidden;}
-        .popup, {position: relative; width: 100℅; height: 320px;}
-        .popup-frame, frame {position: fixed; width: 320px; height: 400px; visibility: hidden;}
-      </style>
+	<head>
+		<!-- Bootstrap CSS -->
+		<link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" rel="stylesheet"></link>
+      	<style>
+      	  .form-control {height: 320px;}
+      	  .popup-container {position: fixed; width: 100℅; height: 400px; overflow: hidden;}
+      	  .popup, {position: relative; width: 100℅; height: 320px;}
+      	  .popup-frame, frame {position: fixed; width: 320px; height: 400px; visibility: hidden;}
+      	</style>
     </head>
     <body>
-     <div class="container">
-<div class="lead">
-           Gunakan kolom dibawah ini untuk mengubah karakter html atau mengembalikan karakter html ke original.
-        </div>
-<form action="" method="post" name="jsed">
-      <div class="form-group">
-      <textarea class="form-control" name="edcode" placeholder="Terapkan kode disini untuk mengubah."></textarea>
-      </div>
-<div class="form-group">
-       <div class="help-block lead">
-        Klik decode untuk mengembalikan kode html ke original atau klik encode untuk mengubah karakter html.
-       </div>
-<button class="btn btn-default btn-light" id="decode" type="submit">Decode</button>
-       <button class="btn btn-default btn-light" id="encode" type="button">Encode</button>
-      </div>
-</form>
-</div>
-<div class="container">
-      <h1>
-Hasil</h1>
-<code>
-       <textarea class="form-control" id="result"></textarea>
-      </code>
-     </div>
-<!-- Optional JavaScript -->
-      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-      <script crossorigin="anonymous" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-      <script crossorigin="anonymous" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> 
-      <script crossorigin="anonymous" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-      <script>
-      
-       (function(window){
- window.htmlentities = {
-  /**
-   * Converts a string to its html characters completely.
-   *
-   * @param {String} str String with unescaped HTML characters
-   **/
-  encode : function(str) {
-   var buf = [];
-   
-   for (var i=str.length-1;i>=0;i--) {
-    buf.unshift(['&#', str[i].charCodeAt(), ';'].join(''));
-   }
-   
-   return buf.join('');
-  },
-  /**
-   * Converts an html characterSet into its original character.
-   *
-   * @param {String} str htmlSet entities
-   **/
-  decode : function(str) {
-   return str.replace(/&#(\d+);/g, function(match, dec) {
-    return String.fromCharCode(dec);
-   });
-  }
- };
-})(window);
+    	<div class="container">
+    		<div class="lead">Gunakan kolom dibawah ini untuk mengubah karakter html atau mengembalikan karakter html ke original.
+    		</div>
+    		<form action="" method="post" name="jsed">
+    			<div class="form-group">
+    				<textarea class="form-control border shadow bg-light" name="edcode" placeholder="Terapkan kode disini untuk mengubah."></textarea>
+    			</div>
+    			<div class="form-group">
+    				<div class="help-block lead">
+    					Klik decode untuk mengembalikan kode html ke original atau klik encode untuk mengubah karakter html.
+    				</div>
+    				<button class="btn btn-default btn-primary" id="decode" type="submit">Decode</button>
+    				<button class="btn btn-default btn-warning" id="encode" type="button">Encode</button>
+    			</div>
+    		</form>
+    	</div>
+    	<div class="container">
+    		<h1>Hasil</h1>
+    		<code><textarea class="form-control" id="result"></textarea></code>
+    	</div>
+    	<!-- Optional JavaScript -->
+    	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    	<script crossorigin="anonymous" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    	<script crossorigin="anonymous" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script> 
+    	<script crossorigin="anonymous" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    	<script>
+    		(function(window){
+    			window.htmlentities = {
+    			/**
+    			 * Converts a string to its html characters completely.
+				 *
+				 * @param {String} str String with unescaped HTML characters
+				 **/
+				encode : function(str) {
+				 	var buf = [];
+				 	for (var i=str.length-1;i>=0;i--) {
+				 		buf.unshift(['&#', str[i].charCodeAt(), ';'].join(''));
+				 	}
+				 	return buf.join('');
+				},
+  				/**
+  				 * Converts an html characterSet into its original character.
+  				 *
+  				 * @param {String} str htmlSet entities
+  				 **/
+  				decode : function(str) {
+  					return str.replace(/&#(\d+);/g, function(match, dec) {
+  						return String.fromCharCode(dec);
+  					});
+  				}
+  			};
+  		})(window);
 
         (function($){
-         $("#decode").click(function(){
-          var fed = document.forms["jsed"]["edcode"].value;
-          //var ved = htmlentities.decode(fed);
-          
-          if (fed == "" || fed == null) {
-           $("#result").val("Masukan kode untuk mengubah ke original.");
-          }
-          else {
-           var ved = htmlentities.decode(fed);
-           $("#result").val(ved);
-          }
-           
-          return false;
-         });
-         
-         $("#encode").click(function(){
-          var fed = document.forms["jsed"]["edcode"].value;
-          //var ved = htmlentities.decode(fed);
-          
-          if (fed == "" || fed == null) {
-           $("#result").val("Masukan kode untuk mengubah karakter html.");
-          }
-          else {
-           var ved = htmlentities.encode(fed);
-           $("#result").val(ved);
-          }
-           
-          return false;
-         });
-         
-        })(jQuery);
-        function htmlEntities(str) {return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
-      </script>
-      <script>
-        (function() {
-          var cx = '011713070553332664769:rcwvfkf_ml4';
-          var gcse = document.createElement('script');
-          gcse.type = 'text/javascript';
-          gcse.async = true;
-          gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+        	$("#decode").click(function(){
+        		var fed = document.forms["jsed"]["edcode"].value;
+        		//var ved = htmlentities.decode(fed);
+				if (fed == "" || fed == null) {
+					$("#result").val("Masukan kode untuk mengubah ke original.");
+				}
+				else {
+					var ved = htmlentities.decode(fed);
+					$("#result").val(ved);
+				}
+				return false;
+			});
+			$("#encode").click(function(){
+				var fed = document.forms["jsed"]["edcode"].value;
+          		//var ved = htmlentities.decode(fed);
+          		if (fed == "" || fed == null) {
+          			$("#result").val("Masukan kode untuk mengubah karakter html.");
+          		}
+          		else {
+          			var ved = htmlentities.encode(fed);
+          		 	$("#result").val(ved);
+          		}
+        		return false;
+        	});
+		})(jQuery);
+		function htmlEntities(str) {return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+	</script>
+	<script>
+		(function() {
+			var cx = '011713070553332664769:rcwvfkf_ml4';
+			var gcse = document.createElement('script');
+			gcse.type = 'text/javascript';
+			gcse.async = true;
+			gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
 
-          var s = document.getElementsByTagName('script')[0];
-          s.parentNode.insertBefore(gcse, s);
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(gcse, s);
         })();
-      </script><gcse:searchresults-only newwindow="true"></gcse:searchresults-only>
-    </body>
-  </html>
+    </script><gcse:searchresults-only newwindow="true"></gcse:searchresults-only>
+</body>
+</html>
