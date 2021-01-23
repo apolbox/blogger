@@ -9,7 +9,7 @@ Mari kita mulai:<br />
 <br />
 Syarat :<br />
 1. Aplikasi termux (Play store)<br />
-2. Quoda Code Editor (Play Store)<br />
+2. Acode Editor (Play Store)<br />
 3. Kuota internet tentunya 😂<br />
 4. Android versi minimal Lollipop.<br />
 <br />
@@ -27,10 +27,8 @@ mari kita mulai langkah-langkahnya.<br />
 3. Cloning repository dari github<br />
 <pre style="background: #f2f2f2; border-radius: 2px; padding: 12px; width: auto;">$ git clone https://github.com/apolbox/termux-webserver.git
 $ cd termux-webserver
-$ chmod +x lampp-script
-$ chmod +x lampp-db
-$ chmod +x ./install
-$ ./install
+$ chmod +x ./install.sh
+$ ./install.sh
 </pre>
 <br />
 Proses instalasi akan berjalan, tunggu sampai selesai.
@@ -38,6 +36,10 @@ Proses instalasi akan berjalan, tunggu sampai selesai.
 Jika muncul pertanyaan anda bisa memilih untuk mengaturnya atau tidak.
 <br />
 <br />
+4. Untuk memulai silahkan ketikan perintah berikut:
+<pre style="background: #f2f2f2; border-radius: 2px; padding: 12px; width: autopx;">$ lampp start --hosting-only</pre>
+
+<!--
 4. Untuk menginstall database gunakan perintah berikut:<br />
 <pre style="background: #f2f2f2; border-radius: 2px; padding: 12px; width: autopx;">$ lampp-db install</pre>
 <br />
@@ -50,6 +52,7 @@ Untuk menjalankan layanan webserver dan layanan database anda bisa menggunakan p
 Untuk menghentikan semua layanan gunakan perintah berikut:<br />
 <pre style="background: #f2f2f2; border-radius: 2px; padding: 12px; width: auto;">$ lampp stop &amp;&amp; lampp-db stop
 </pre>
+-->
 <br />
 Sekarang buka web browser anda dan coba ketikkan localhost:8080<br />
 <br />
